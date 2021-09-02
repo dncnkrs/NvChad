@@ -38,6 +38,7 @@ opt.tabstop = options.tabstop
 opt.termguicolors = true
 opt.timeoutlen = options.timeoutlen
 opt.undofile = options.permanent_undo
+opt.scrolloff = options.scrolloff
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = options.updatetime

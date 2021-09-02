@@ -16,6 +16,7 @@ M.ui = {
       fav_themes = {
          "onedark",
          "gruvchad",
+         "aquarium"
       },
    },
 
@@ -57,12 +58,13 @@ M.options = {
    smartindent = true,
    tabstop = 8, -- Number of spaces that a <Tab> in the file counts for
    timeoutlen = 400,
-   relativenumber = false,
+   relativenumber = true,
    ruler = false,
    updatetime = 250,
    -- used for updater
    update_url = "https://github.com/NvChad/NvChad",
    update_branch = "main",
+   scrolloff = 3,
 }
 
 -- these are plugin related options
@@ -86,7 +88,7 @@ M.plugin_status = {
    gitsigns = true, -- gitsigns in statusline
    lspsignature = true, -- lsp enhancements
    neoformat = true, -- universal formatter
-   neoscroll = true, -- smooth scroll
+   neoscroll = false, -- smooth scroll
    telescope_media = false, -- see media files in telescope picker
    truezen = false, -- no distraction mode for nvim
    vim_fugitive = false, -- git in nvim
@@ -212,6 +214,22 @@ M.custom.mappings = {
    --    "<leader>cc",
    --    "gg0vG$d",
    -- },
+ start_line = {
+   { "n", "v" },
+   "H",
+   "^",
+ },
+ end_line = {
+   { "n", "v" },
+   "L",
+   "$",
+ },
+ unsearch = {
+   { "n" },
+   "<C-h>",
+   "<cmd>nohlsearch<CR>",
+ },
+
 }
 
 return M
